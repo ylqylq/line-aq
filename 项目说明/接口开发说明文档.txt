@@ -1,0 +1,43 @@
+﻿在线问答服务器端开发说明：
+
+1 用户注册接口 /user/register
+
+2 用户登录接口 /user/signin
+
+3 退出接口 /user/signout
+
+4 上传头像接口 /user/photo
+
+5 提问接口 /ask
+  
+  提问逻辑：
+  判断是否有用户登录，即cookie中是否有用户(req.cookies.username),
+  
+  如果没有用户登录返回一条错误提示。
+   
+  如果有用户登录：记录用户名、客户端ip、时间，把它们保存到req.body中，
+  代码如下：
+  
+  var time = new Date();
+    
+  req.body.username = username;
+  
+  req.body.ip = req.ip;
+      
+  req.body.time = time;
+  
+  创建一个保存”用户提问问题”的函数saveFile(),在函数中指定文件名，
+  
+  规定文件名为：`questions/${time.getTime()}.txt`
+  
+  即在questions目录下，文件名以提问时间的毫秒数命名
+  
+  判断questions目录是否存在，如果存在就调用saveFile()，不存在则创建它
+
+6 显示首页数据接口 /questions
+  
+  显示首页数据即从questions目录下读取txt文件内容
+
+7 回答问题接口 /answer
+  
+  回答问题：把回答的内容附加到questions目录下对应的”问题”内容后面

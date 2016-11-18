@@ -1,0 +1,1 @@
+{"content":"JS中原型链是怎么回事","username":"admin","ip":"::ffff:127.0.0.1","time":"2016-09-06T14:21:37.376Z","answers":[{"content":"原型套用原型就形成了原型链","question":"1473171697376","username":"admin","ip":"::ffff:127.0.0.1","time":"2016-09-06T14:22:08.759Z"}]}

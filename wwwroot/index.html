@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="author" content="杨柳青">
+    <title>中北大学在线问答</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/all.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!--dropdown是新添加-->
+        <div class="container dropdown">
+            <a class="navbar-brand" href="#">中北大学</a>
+            <div class="navbar-text pull-right text-right">
+                <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                aria-controls="navbar">-->
+                    <span id="ask"><span class="glyphicon glyphicon-plus"></span>提问</span>&#x3000;
+                    <span id="user" class="dropdown-toogle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <span>张强</span>
+                    </span>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a class="text-right" href="user.html">个人资料</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a class="text-right">退出</a></li>
+                    </ul>
+                    <!--<span class="icon-bar"></span>-->
+                    <!--<span class="icon-bar"></span>-->
+                <!--</button>-->
+                
+            </div>
+            <!--<div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>-->
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <!--显示提问问题和回答内容的div-->
+    <div class="container questions"></div>
+    <!---->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <!--index.js作用：把从服务器端返回的数据按照一定格式显示到首页上-->
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>
